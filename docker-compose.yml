@@ -1,5 +1,5 @@
 cacti:
-  image: domezy/cacti:0.8.8b-apache
+  image: domezy/cacti:1.1.28-apache
   ports:
    - "9013:80"
    - "161:161"
