@@ -1,5 +1,5 @@
 cacti:
-  image: quantumobject/docker-cacti
+  image: domezy/cacti:0.8.8b-apache
   ports:
    - "9013:80"
    - "161:161"
