@@ -17,7 +17,7 @@ CACTI_VERSION=0.8.8b
                                                             snmpd python-netsnmp libnet-snmp-perl snmp-mibs-downloader \
                     && cd /opt/ \
                     && wget https://www.cacti.net/downloads/cacti-"$CACTI_VERSION".tar.gz \
-                    && ver=$(tar -tf cacti-latest.tar.gz | head -n1 | tr -d /) \
+                    && ver=$(tar -tf cacti-"$CACTI_VERSION".tar.gz | head -n1 | tr -d /) \
                     && tar -xvf cacti-"$CACTI_VERSION".tar.gz && mv $ver cacti \
                     && rm cacti-"$CACTI_VERSION".tar.gz \
                     && apt-get clean \
