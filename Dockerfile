@@ -8,7 +8,7 @@ ENV CACTI_VERSION=1.1.28
 
 # Update the container
 #Installation of nesesary package/software for this containers...
- RUN apt-get update && echo $TZ > /etc/timezone && DEBIAN_FRONTEND=noninteractive apt-get install -yq mariadb-server mariadb-client php7.0 build-essential\
+ RUN apt-get update && echo $TZ > /etc/timezone && DEBIAN_FRONTEND=noninteractive apt-get install -yq php7.0 build-essential\
                                                             apache2  snmp libapache2-mod-php7.0 libssl-dev \
                                                             rrdtool librrds-perl php7.0-mysql\
                                                             php7.0-xml php7.0-ldap php7.0-mbstring \
@@ -52,13 +52,13 @@ RUN chmod +x /etc/service/apache2/run  \
     && chown -R www-data /var/log/apache2
 
 # to add mysqld deamon to runit
-RUN mkdir -p /etc/service/mysqld /var/log/mysqld ; sync
-COPY mysqld.sh /etc/service/mysqld/run
-RUN chmod +x /etc/service/mysqld/run  \
-    && cp /var/log/cron/config /var/log/mysqld/ \
-    && chown -R mysql /var/log/mysqld
+#RUN mkdir -p /etc/service/mysqld /var/log/mysqld ; sync
+#COPY mysqld.sh /etc/service/mysqld/run
+#RUN chmod +x /etc/service/mysqld/run  \
+#    && cp /var/log/cron/config /var/log/mysqld/ \
+#    && chown -R mysql /var/log/mysqld
 
-# to add mysqld deamon to runit
+# to add snmpd deamon to runit
 RUN mkdir -p /etc/service/snmpd /var/log/snmpd ; sync
 COPY snmpd.sh /etc/service/snmpd/run
 RUN chmod +x /etc/service/snmpd/run  \
