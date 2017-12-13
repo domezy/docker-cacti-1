@@ -18,8 +18,8 @@ CACTI_VERSION=0.8.8b
                     && cd /opt/ \
                     && wget https://www.cacti.net/downloads/cacti-"$CACTI_VERSION".tar.gz \
                     && ver=$(tar -tf cacti-latest.tar.gz | head -n1 | tr -d /) \
-                    && tar -xvf cacti-latest.tar.gz && mv $ver cacti \
-                    && rm cacti-latest.tar.gz \
+                    && tar -xvf cacti-"$CACTI_VERSION".tar.gz && mv $ver cacti \
+                    && rm cacti-"$CACTI_VERSION".tar.gz \
                     && apt-get clean \
                     && rm -rf /tmp/* /var/tmp/*  \
                     && rm -rf /var/lib/apt/lists/*
