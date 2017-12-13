@@ -3,6 +3,7 @@ cacti:
   ports:
    - "9013:80"
    - "161:161"
+   - "6306:3306"
   volumes:
    - /etc/localtime:/etc/localtime:ro
    - ./backups/:/var/backups/
