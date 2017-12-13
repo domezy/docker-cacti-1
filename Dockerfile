@@ -4,7 +4,7 @@ FROM quantumobject/docker-baseimage:16.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 ENV TZ Asia/Bangkok
-ENV CACTI_VERSION=0.8.8b
+ENV CACTI_VERSION=latest
 
 # Update the container
 #Installation of nesesary package/software for this containers...
