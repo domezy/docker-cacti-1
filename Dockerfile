@@ -11,7 +11,7 @@ ENV CACTI_VERSION=1.1.28
  RUN apt-get update && echo $TZ > /etc/timezone && DEBIAN_FRONTEND=noninteractive apt-get install -yq php7.0 build-essential\
                                                             apache2  snmp libapache2-mod-php7.0 libssl-dev \
                                                             rrdtool librrds-perl php7.0-mysql\
-                                                            php7.0-xml php7.0-ldap php7.0-mbstring \
+                                                            php7.0-xml php7.0-ldap php7.0-mbstring libcurl3 php7.0-curl\
                                                             php7.0-gd php7.0-snmp php7.0-gmp php7.0-mcrypt \
                                                             libmysqlclient-dev libsnmp-dev help2man git \
                                                             snmpd python-netsnmp libnet-snmp-perl snmp-mibs-downloader \
